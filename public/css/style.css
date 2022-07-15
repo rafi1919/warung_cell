@@ -15,7 +15,7 @@
     left: 0;
     height: 100%;
     width: 260px;
-    background: #2f8a4d;
+    background: #191a19;
     z-index: 100;
     transition: all 0.5s ease;
 }
@@ -65,7 +65,7 @@
     transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover {
-    background: #2f8a4d;
+    background: #1e5128;
 }
 .sidebar .nav-links li .iocn-link {
     display: flex;
@@ -109,7 +109,7 @@
 .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background: #2f8a4d;
+    background: #1e5128;
     display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu {
@@ -170,7 +170,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #2f8a4d;
+    background: #191a19;
     padding: 12px 0;
     transition: all 0.5s ease;
 }
@@ -190,7 +190,7 @@
     object-fit: cover;
     border-radius: 16px;
     margin: 0 14px 0 12px;
-    background: #2f8a4d;
+    background: #1e5128;
     transition: all 0.5s ease;
 }
 .sidebar.close .profile-details img {
@@ -226,7 +226,7 @@
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
-    color: #2f8a4d;
+    color: #1e5128;
     font-size: 35px;
 }
 .home-section .home-content .bx-menu {
@@ -287,7 +287,7 @@ article {
 }
 
 .table-header {
-    background-color: #2f8a4d;
+    background-color: #1e5128;
     color: white;
 }
 
@@ -309,7 +309,7 @@ article {
     border-radius: 12px;
     width: calc(100% / 3 - 15px);
     padding: 15px 20px;
-    background-color: #2f8a4d;
+    background-color: #1e5128;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
@@ -387,15 +387,15 @@ article {
 }
 
 .btn.btn-success.tambah {
-    background-color: #2f8a4d;
-    border-color: #2f8a4d;
+    background-color: #1e5128;
+    border-color: #1e5128;
     margin-left: 20px;
     margin-top: 5px;
 }
 
 .btn.btn-success.bayar {
-    background-color: #2f8a4d;
-    border-color: #2f8a4d;
+    background-color: #1e5128;
+    border-color: #1e5128;
     margin-left: 10px;
     margin-top: 5px;
 }
@@ -407,5 +407,28 @@ article {
 
 .table.table-bordered.table-hover.kasir {
     border: solid;
-    border-color: #62c382;
+    border-color: #191a19;
+}
+
+/* edit admin konten */
+
+.form-control.input-nama-edit {
+    width: 300px;
+}
+
+.form-control.input-email-edit {
+    width: 300px;
+}
+
+/* Tambah Stok Button konten */
+
+.btn.btn-primary.AddStok {
+    margin-left: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
 }

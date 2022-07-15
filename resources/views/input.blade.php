@@ -8,9 +8,9 @@
         </div>
         <div class="input_btn">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <a class="btn btn-primary" href="/input/create">
                 Tambah Barang
-            </button>
+            </a>
         </div>
         <!-- Search Button -->
         <div class="input-group">
@@ -20,64 +20,39 @@
             <div class="src_btn"><button type="button" class="btn btn-outline-primary">search</button>
             </div>
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Form Tambah Barang</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="input_nama_barang" class="form-label">Nama Barang</label>
-                            <input type="text" class="form-control" id="input_nama_barang" placeholder="Permen Relaxa">
-                        </div>
-                        <div class="mb-3">
-                            <label for="input_jumlah_barang" class="form-label">Jumlah Barang</label>
-                            <input type="number" class="form-control" id="input_jumlah_barang" min="1" max="100"
-                                placeholder="1-100">
-                        </div>
-                        <div class="mb-3">
-                            <label for="input_tanggal_masuk" class="form-label">Tanggal Masuk</label>
-                            <input type="date" class="form-control" id="input_tanggal_barang" placeholder="2022-03-01">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
         <!--Table Input Start-->
         <div class="input_table">
-            <table class="table table-bordered table-hover">
+            <table  class="table table-bordered table-hover">
                 <thead class="table-header">
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Id Masuk</th>
-                        <th scope="col">Id Barang</th>
-                        <th scope="col">Id User</th>
-                        <th scope="col">Jumlah Barang Masuk</th>
+                        <th scope="col">No Barang Masuk</th>
+                        <th scope="col">Nama Barang</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Tanggal Masuk</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Jumlah</th>
                         <th scope="col">Total</th>
-                        <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @php $no=1 @endphp
+                    @foreach($brg_msk as $row)
                     <tr>
-                        <td scope="col">1</td>
-                        <td scope="col">001</td>
-                        <th scope="row">B001</th>
-                        <td> A5\0001</td>
-                        <td>3</td>
-                        <td>40</td>
-                        <td><a href="#" class="btn btn-primary btn-xs"><i class="bx bx-edit"></i>Edit</a>
-                            <a href="#" class="btn btn-danger btn-xs"><i class="bx bx-trash"></i>Hapus</a>
-                        </td>
+                        <td>{{  $no++ }}</td>
+                        <td>{{ $row->no_brg_msk }}</td>
+                        <td>{{ $row->nama_barang }}</td>
+                        <td>{{ $row->nama_kategori }}</td>
+                        <td>{{ date('d F Y', strtotime($row->tgl_brg_msk)) }}</td>
+                        <td>Rp. {{ number_format($row->harga) }}</td>
+                        <td>{{ $row->jml_brg_msk }} Pcs</td>
+                        <td>Rp. {{ number_format($row->total) }}</td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1E5128" fill-opacity="1" d="M0,256L120,266.7C240,277,480,299,720,282.7C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
         <!--Table Input Stop-->
         @endsection

@@ -16,10 +16,25 @@ class RegisterController extends Controller
 
     public function editadmin($id)
     {
-        $data_edit = User::find($id);
-        // dd($data_edit);
+        $data_admin = User::find($id);
+        // dd($data_admin);
+        return view('editadmin', compact('data_admin'));
+    }
 
-        return view('register', compact('data_edit'));
+    public function updatedata(Request $request, $id)
+    {
+        $data_admin = User::find($id);
+        $data_admin->update($request->all());
+
+        return redirect('/register')->with('success', 'Update Data Berhasil!');
+    }
+
+    public function deletedata($id)
+    {
+        $data_admin = User::find($id);
+        $data_admin->delete();
+
+        return redirect('/register')->with('success', 'Data Berhasil dihapus');
     }
 
     public function tambahadmin(Request $request)

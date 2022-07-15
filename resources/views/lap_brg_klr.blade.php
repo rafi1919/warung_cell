@@ -4,13 +4,13 @@
 <section class="home-section">
     <div class="home-content">
         <i class="bx bx-menu"></i>
-        <span class="text">Barang Keluar</span>
+        <span class="text">Laporan Barang Keluar</span>
     </div>
     <div class="input_btn">
         <!-- Button trigger modal -->
-        <a class="btn btn-primary" href="/output/create">
-            Tambah Barang
-        </a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCetak">
+            Cetak Data
+        </button>
     </div>
     <!-- Search Button -->
     <div class="input-group">
@@ -55,4 +55,33 @@
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1E5128" fill-opacity="1" d="M0,256L120,266.7C240,277,480,299,720,282.7C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1E5128" fill-opacity="1" d="M0,256L120,266.7C240,277,480,299,720,282.7C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
     <!--Table Input Stop-->
+    <!-- Tambah Stok modal -->
+    <div class="modal fade" id="modalCetak" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModal">Cetak Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="/lap_brg_klr/cetak_brg_klr" enctype="multipart/form-data" method="GET" target="_blank">
+
+                    @csrf
+
+                <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Mulai</label>
+                            <input type="date" name="tgl_mulai" class="form-control" required autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Selesai</label>
+                            <input type="date" name="tgl_selesai" class="form-control" required>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Cetak Data</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
     @endsection

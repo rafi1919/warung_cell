@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="{{ url('css/login.css') }}" >
 </head>
 <body>
-<div class="background">
+<div class="background row">
+  <div class="col spline"> 
+    <iframe src='https://my.spline.design/untitledcopy-5ac88c8bdcd11a39cdc0b9c64c5d701d/' frameborder='0' width='100%' height='100%'></iframe>
+  </div>
   
-  <form class="modal-content animate" action="/" method="post">
+  <form class="col modal-content animate" action="/" method="post">
     @csrf
     
     <div class="imgcontainer" class="modal-content animate">
@@ -43,5 +46,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
   crossorigin="anonymous"></script>
-</body>
-</html>
+</body></html>
+

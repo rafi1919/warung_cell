@@ -41,7 +41,7 @@
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Admin</label>
-                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Masukkan Nama Admin" required value="{{ old('name') }}">
+                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Masukkan Nama Admin" required value="{{ old('name') }}" autofocus>
                             @error('name')
                                 <div class="invalid-feedback">
                                 {{ $message }}
@@ -83,9 +83,12 @@
                     <h5 class="modal-title" id="editModal">Form Edit Admin</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form action="" method="post">
+                <form action="#" method="post" id="editForm">
 
+                    @csrf
+
+                <div class="modal-body">
+    
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Admin</label>
                             <input type="text" name="name" class="form-control" id="name">
@@ -114,21 +117,26 @@
                 </tr>
             </thead>
             <tbody>
+                @php
+                    $no = 1;
+                @endphp
                 @foreach($data_admin as $item)
                 <tr>
-                    <td scope="row">{{ $item['id'] }}</td>
-                    <th scope="row">{{ $item['name'] }}</th>
-                    <td>{{ $item['email'] }}</td>
+                    <td scope="row">{{ $no++ }}</td>
+                    <th scope="row">{{ $item->name }}</th>
+                    <td>{{ $item->email }}</td>
                     <td>
-                        <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#editModal">
+                        <a class="btn btn-primary" href="/editadmin/{{ $item->id }}">
                         <i class="bx bx-edit"></i>Edit
                     </a>
-                        <a href="#" class="btn btn-danger btn-xs"><i class="bx bx-trash"></i>Hapus</a>
+                        <a href="/deletedata/{{ $item->id }}" class="btn btn-danger btn-xs"><i class="bx bx-trash"></i>Hapus</a>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1E5128" fill-opacity="1" d="M0,256L120,266.7C240,277,480,299,720,282.7C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+</section>
     <!--Table Input Stop-->
     @endsection

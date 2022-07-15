@@ -30,71 +30,7 @@
         </div>
 
       </div>
-      <!----======== BOXES KONTEN STOP ======== -->
-      <div class="activity">
-        <div class="home-content">
-          <span class="text">Data Admin</span>
-        </div>
-        <!----======== TABEL DATA ADMIN ======== -->
-      </div>
-      <div class="input_table activity">
-        <table class="table table-bordered table-hover">
-          <thead class="table-header">
-            <tr>
-              <th scope="col">Id Admin</th>
-              <th scope="col">Nama Admin</th>
-              <th scope="col">Email</th>
-              <th scope="col">Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">A001</th>
-              <td>Lama Ga Jumpa</td>
-              <td>lamajugaya@elon.com</td>
-              <td>
-                <button type="button" class="btn btn-danger">Hapus</button>
-                <button type="button" class="btn btn-primary">Edit</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!----======== TABEL DATA ADMIN STOP ======== -->
-      <div class="activity">
-        <div class="home-content">
-          <span class="text">Aktivitas Admin</span>
-        </div>
-        <!----======== TABEL AKTIVITAS ADMIN ======== -->
-      </div>
-      <div class="input_table activity">
-        <table class="table table-bordered table-hover">
-          <thead class="table-header">
-            <tr>
-              <th scope="col">Id Admin</th>
-              <th scope="col">Nama Admin</th>
-              <th scope="col">Waktu Login</th>
-              <th scope="col">Email</th>
-              <th scope="col">Status</th>
-              <th scope="col">Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">A001</th>
-              <td>Lama Ga Jumpa</td>
-              <td>2022-5-21</td>
-              <td>lamajugaya@elon.com</td>
-              <td>Aktif</td>
-              <td>
-                <button type="button" class="btn btn-danger">Hapus</button>
-                <button type="button" class="btn btn-primary">Edit</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!----======== TABEL AKTIVITAS ADMIN STOP ======== -->
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1E5128" fill-opacity="1" d="M0,256L120,266.7C240,277,480,299,720,282.7C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
   </div>
 @endsection
